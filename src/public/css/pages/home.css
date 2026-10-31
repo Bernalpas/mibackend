@@ -1,0 +1,181 @@
+/* ============================================
+   HOME
+   ============================================ */
+
+/* ---- Hero ---- */
+.hero {
+  background: linear-gradient(135deg, #fff7f2 0%, #ffffff 60%);
+  padding-block: var(--space-12);
+  overflow: hidden;
+}
+
+.hero__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: var(--space-8);
+}
+
+.hero__badge {
+  display: inline-block;
+  background: rgba(255, 90, 31, 0.1);
+  color: var(--color-primary);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-full);
+  margin-bottom: var(--space-4);
+}
+
+.hero__title {
+  font-size: clamp(2.25rem, 5vw, var(--font-size-5xl));
+  font-weight: 800;
+  margin-bottom: var(--space-4);
+}
+
+.hero__title-accent {
+  color: var(--color-primary);
+  position: relative;
+}
+
+.hero__text {
+  font-size: var(--font-size-lg);
+  max-width: 480px;
+  margin-bottom: var(--space-6);
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-bottom: var(--space-8);
+}
+
+.hero__stats {
+  display: flex;
+  gap: var(--space-6);
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--color-border);
+}
+
+.hero__stat {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero__stat strong {
+  font-size: var(--font-size-2xl);
+  color: var(--color-text);
+}
+
+.hero__stat span {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+/* Imagen / flotantes */
+.hero__image {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 400px;
+}
+
+.hero__image-glow {
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(circle, rgba(255, 90, 31, 0.25), transparent 70%);
+  border-radius: var(--radius-full);
+  filter: blur(30px);
+}
+
+.hero__image img {
+  position: relative;
+  z-index: 1;
+  border-radius: var(--radius-xl);
+  max-height: 480px;
+  object-fit: cover;
+}
+
+.hero__floating {
+  position: absolute;
+  font-size: 2.5rem;
+  background: var(--color-surface);
+  width: 72px;
+  height: 72px;
+  display: grid;
+  place-items: center;
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-lg);
+  z-index: 2;
+  animation: float 4s ease-in-out infinite;
+}
+
+.hero__floating--1 { top: 8%;  left: 4%;  animation-delay: 0s; }
+.hero__floating--2 { top: 18%; right: 2%; animation-delay: 1s; }
+.hero__floating--3 { bottom: 18%; left: 0; animation-delay: 2s; }
+.hero__floating--4 { bottom: 8%; right: 6%; animation-delay: 3s; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-16px); }
+}
+
+/* ---- Menú ---- */
+.menu__filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-8);
+}
+
+.menu__filter {
+  padding: var(--space-2) var(--space-5);
+  border-radius: var(--radius-full);
+  border: 2px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  transition: all var(--transition-fast);
+}
+
+.menu__filter:hover {
+  border-color: var(--color-primary-light);
+  color: var(--color-primary);
+}
+
+.menu__filter--active {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-text-light);
+}
+
+.menu__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: var(--space-6);
+}
+
+.menu__empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: var(--space-10);
+  color: var(--color-text-muted);
+}
+
+/* Responsive hero */
+@media (max-width: 900px) {
+  .hero__container { grid-template-columns: 1fr; }
+  .hero__image { order: -1; min-height: 300px; }
+  .hero__image-glow { width: 280px; height: 280px; }
+  .hero__floating { width: 56px; height: 56px; font-size: 1.8rem; }
+  .hero__stats { gap: var(--space-4); }
+}
+
+@media (max-width: 480px) {
+  .hero__actions { flex-direction: column; }
+  .hero__actions .btn { width: 100%; }
+}

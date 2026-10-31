@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Inicia sesión en FastBite y accede a tus pedidos, ofertas exclusivas y más.">
+  <title>Iniciar Sesión | FastBite</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/base/reset.css">
+  <link rel="stylesheet" href="../css/base/variables.css">
+  <link rel="stylesheet" href="../css/base/typography.css">
+  <link rel="stylesheet" href="../css/base/global.css">
+  <link rel="stylesheet" href="../css/components/buttons.css">
+  <link rel="stylesheet" href="../css/components/forms.css">
+  <link rel="stylesheet" href="../css/pages/login.css">
+  <link rel="stylesheet" href="../css/main.css">
+</head>
+<body class="auth-body">
+
+  <!-- ============ PANEL IZQUIERDO (branding) ============ -->
+  <aside class="auth-aside">
+    <div class="auth-aside__blob auth-aside__blob--1" aria-hidden="true"></div>
+    <div class="auth-aside__blob auth-aside__blob--2" aria-hidden="true"></div>
+
+    <div class="auth-aside__content">
+      <a href="../index.html" class="auth-aside__logo">
+        <span class="auth-aside__logo-icon">🍕</span>
+        <span class="auth-aside__logo-text">Fast<strong>Bite</strong></span>
+      </a>
+
+      <div class="auth-aside__hero">
+        <div class="auth-aside__floating auth-aside__floating--1" aria-hidden="true">🍔</div>
+        <div class="auth-aside__floating auth-aside__floating--2" aria-hidden="true">🍕</div>
+        <div class="auth-aside__floating auth-aside__floating--3" aria-hidden="true">🥟</div>
+
+        <h2 class="auth-aside__title">
+          Tu comida favorita,<br>a un clic de distancia.
+        </h2>
+        <p class="auth-aside__text">
+          Inicia sesión para guardar tus pedidos favoritos, acceder a ofertas exclusivas
+          y hacer seguimiento de tus entregas en tiempo real.
+        </p>
+
+        <ul class="auth-aside__benefits">
+          <li>
+            <span class="auth-aside__benefit-icon">⚡</span>
+            <span>Pedidos más rápidos con un solo clic</span>
+          </li>
+          <li>
+            <span class="auth-aside__benefit-icon">🎁</span>
+            <span>Ofertas y descuentos exclusivos</span>
+          </li>
+          <li>
+            <span class="auth-aside__benefit-icon">📦</span>
+            <span>Historial y seguimiento de pedidos</span>
+          </li>
+        </ul>
+      </div>
+
+      <p class="auth-aside__footer">
+        &copy; <span id="year"></span> FastBite. Todos los derechos reservados.
+      </p>
+    </div>
+  </aside>
+
+  <!-- ============ PANEL DERECHO (formulario) ============ -->
+  <main class="auth-main">
+    <div class="auth-card">
+      <a href="../index.html" class="auth-card__back">
+        <span aria-hidden="true">←</span> Volver al inicio
+      </a>
+
+      <div class="auth-card__header">
+        <h1 class="auth-card__title">Bienvenido de nuevo</h1>
+        <p class="auth-card__subtitle">Inicia sesión en tu cuenta de FastBite</p>
+      </div>
+
+      <!-- Formulario -->
+      <form class="auth-form" id="loginForm" novalidate>
+        <div class="form-group">
+          <label for="email" class="form-label">Correo electrónico</label>
+          <div class="form-input-wrapper">
+            <span class="form-input-icon" aria-hidden="true">✉️</span>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="form-input form-input--icon"
+              placeholder="tu@email.com"
+              autocomplete="email"
+              required
+            >
+          </div>
+          <span class="form-error" data-error-for="email"></span>
+        </div>
+
+        <div class="form-group">
+          <div class="form-label-row">
+            <label for="password" class="form-label">Contraseña</label>
+            <a href="#" class="form-link">¿Olvidaste tu contraseña?</a>
+          </div>
+          <div class="form-input-wrapper">
+            <span class="form-input-icon" aria-hidden="true">🔒</span>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              class="form-input form-input--icon form-input--password"
+              placeholder="Tu contraseña"
+              autocomplete="current-password"
+              minlength="6"
+              required
+            >
+            <button
+              type="button"
+              class="form-toggle-password"
+              id="togglePassword"
+              aria-label="Mostrar contraseña"
+              aria-pressed="false"
+            >
+              👁️
+            </button>
+          </div>
+          <span class="form-error" data-error-for="password"></span>
+        </div>
+
+        <div class="auth-form__options">
+          <label class="form-check">
+            <input type="checkbox" id="remember" name="remember">
+            <span>Recordarme</span>
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn--primary btn--lg btn--block" id="submitBtn">
+          Iniciar sesión
+        </button>
+
+        <p class="form-success" id="loginSuccess" hidden>
+          ✅ ¡Inicio de sesión exitoso! Redirigiendo...
+        </p>
+      </form>
+
+      <!-- Divisor -->
+      <div class="form-divider">o continúa con</div>
+
+      <!-- Social login -->
+      <div class="auth-social">
+        <button type="button" class="auth-social__btn" aria-label="Continuar con Google">
+          <span class="auth-social__icon">🔍</span>
+          <span>Google</span>
+        </button>
+        <button type="button" class="auth-social__btn" aria-label="Continuar con Facebook">
+          <span class="auth-social__icon">📘</span>
+          <span>Facebook</span>
+        </button>
+      </div>
+
+      <!-- Registro -->
+      <p class="auth-card__register">
+        ¿No tienes cuenta?
+        <a href="#" class="form-link">Regístrate gratis</a>
+      </p>
+    </div>
+  </main>
+
+  <script src="../js/utils/dom.js"></script>
+  <script src="../js/utils/validation.js"></script>
+  <script src="../js/pages/login.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

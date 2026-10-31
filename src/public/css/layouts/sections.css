@@ -1,0 +1,71 @@
+/* ============================================
+   SECCIONES COMUNES
+   ============================================ */
+
+/* Grid de cards reutilizable */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-5);
+}
+
+/* CTA final */
+.cta {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  color: var(--color-text-light);
+}
+
+.cta__container {
+  text-align: center;
+}
+
+.cta__content {
+  max-width: 560px;
+  margin-inline: auto;
+}
+
+.cta__title {
+  color: var(--color-text-light);
+  font-size: var(--font-size-3xl);
+  margin-bottom: var(--space-3);
+}
+
+.cta__text {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--space-6);
+}
+
+/* Features (beneficios) */
+.features__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-5);
+}
+
+.feature {
+  text-align: center;
+  padding: var(--space-5);
+  border-radius: var(--radius-lg);
+  transition: transform var(--transition-base), background var(--transition-base);
+}
+
+.feature:hover {
+  transform: translateY(-4px);
+  background: var(--color-bg-alt);
+}
+
+.feature__icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: var(--space-3);
+}
+
+.feature__title {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--space-2);
+}
+
+.feature__text {
+  font-size: var(--font-size-sm);
+}

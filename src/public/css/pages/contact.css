@@ -1,0 +1,124 @@
+/* ============================================
+   CONTACT
+   ============================================ */
+
+/* ---- Layout de dos columnas ---- */
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: var(--space-8);
+  align-items: start;
+}
+
+/* ---- Formulario ---- */
+.contact-form-wrapper {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+  box-shadow: var(--shadow-sm);
+}
+
+.contact-form__intro {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-5);
+}
+
+.contact-form {
+  margin-top: var(--space-4);
+}
+
+/* ---- Info de contacto ---- */
+.contact-info {
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+}
+
+.contact-info__item {
+  display: flex;
+  gap: var(--space-4);
+  padding-block: var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.contact-info__item:last-of-type {
+  border-bottom: none;
+}
+
+.contact-info__icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  background: rgba(255, 90, 31, 0.1);
+  border-radius: var(--radius-md);
+}
+
+.contact-info__title {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  margin-bottom: var(--space-1);
+  color: var(--color-text);
+}
+
+.contact-info__text {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.contact-info__text a {
+  color: var(--color-primary);
+  font-weight: 500;
+  transition: color var(--transition-fast);
+}
+
+.contact-info__text a:hover {
+  color: var(--color-primary-dark);
+  text-decoration: underline;
+}
+
+/* ---- Mapa placeholder ---- */
+.contact-info__map {
+  margin-top: var(--space-5);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.contact-info__map .img-fallback {
+  min-height: 200px;
+  font-size: var(--font-size-lg);
+  background: linear-gradient(135deg, #fff5ef, #ffe8d9);
+  border: 1px dashed var(--color-primary-light);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  .contact-form-wrapper,
+  .contact-info {
+    padding: var(--space-6);
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-form-wrapper,
+  .contact-info {
+    padding: var(--space-5);
+  }
+
+  .contact-info__icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.25rem;
+  }
+}

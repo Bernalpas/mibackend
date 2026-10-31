@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="FastBite - Las mejores empanadas, pizzas, hamburguesas y bebidas. Pide ahora y recibe en casa.">
+  <title>FastBite | Comida Rápida Deliciosa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base/reset.css">
+  <link rel="stylesheet" href="css/base/variables.css">
+  <link rel="stylesheet" href="css/base/typography.css">
+  <link rel="stylesheet" href="css/base/global.css">
+  <link rel="stylesheet" href="css/layouts/header.css">
+  <link rel="stylesheet" href="css/layouts/sections.css">
+  <link rel="stylesheet" href="css/components/buttons.css">
+  <link rel="stylesheet" href="css/components/cards.css">
+  <link rel="stylesheet" href="css/components/navbar.css">
+  <link rel="stylesheet" href="css/components/footer.css">
+  <link rel="stylesheet" href="css/pages/home.css">
+  <link rel="stylesheet" href="css/utilities/animations.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <!-- ============ HEADER ============ -->
+  <header class="header" id="header">
+    <div class="container header__container">
+      <a href="index.html" class="header__logo">
+        <span class="header__logo-icon">🍕</span>
+        <span class="header__logo-text">Fast<strong>Bite</strong></span>
+      </a>
+
+      <nav class="navbar" id="navbar">
+        <ul class="navbar__list">
+          <li class="navbar__item"><a href="index.html" class="navbar__link navbar__link--active">Inicio</a></li>
+          <li class="navbar__item"><a href="#menu" class="navbar__link">Menú</a></li>
+          <li class="navbar__item"><a href="pages/about.html" class="navbar__link">Nosotros</a></li>
+          <li class="navbar__item"><a href="pages/contact.html" class="navbar__link">Contacto</a></li>
+          <li class="navbar__item"><a href="pages/login.html" class="navbar__link navbar__link--cta">Iniciar Sesión</a></li>
+        </ul>
+      </nav>
+
+      <button class="header__toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <a href="#menu" class="btn btn--primary header__cart">
+        🛒 <span class="header__cart-count">0</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="container hero__container">
+      <div class="hero__content">
+        <span class="hero__badge">🔥 Envío gratis en pedidos +$20</span>
+        <h1 class="hero__title">Comida rápida,<br><span class="hero__title-accent">sabor inolvidable</span></h1>
+        <p class="hero__text">
+          Empanadas artesanales, pizzas al horno, hamburguesas jugosas y bebidas heladas.
+          Pide en minutos y recibe en tu puerta.
+        </p>
+        <div class="hero__actions">
+          <a href="#menu" class="btn btn--primary btn--lg">Ver Menú</a>
+          <a href="pages/about.html" class="btn btn--outline btn--lg">Conócenos</a>
+        </div>
+        <div class="hero__stats">
+          <div class="hero__stat"><strong>+50</strong><span>Productos</span></div>
+          <div class="hero__stat"><strong>30min</strong><span>Entrega</span></div>
+          <div class="hero__stat"><strong>4.9★</strong><span>Valoración</span></div>
+        </div>
+      </div>
+      <div class="hero__image">
+        <div class="hero__image-glow"></div>
+        <img src="assets/images/banners/hero-food.png" alt="Comida rápida deliciosa" loading="eager"
+             onerror="this.style.display='none'">
+        <div class="hero__floating hero__floating--1">🍔</div>
+        <div class="hero__floating hero__floating--2">🍕</div>
+        <div class="hero__floating hero__floating--3">🥟</div>
+        <div class="hero__floating hero__floating--4">🥤</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CATEGORÍAS ============ -->
+  <section class="categories section" id="categories">
+    <div class="container">
+      <div class="section__header">
+        <h2 class="section__title">Explora nuestras categorías</h2>
+        <p class="section__subtitle">Lo que se te antoje, lo tenemos</p>
+      </div>
+      <div class="categories__grid">
+        <a href="#menu" class="category-card" data-filter="empanadas">
+          <span class="category-card__icon">🥟</span>
+          <h3 class="category-card__title">Empanadas</h3>
+          <p class="category-card__text">Artesanales y horneadas</p>
+        </a>
+        <a href="#menu" class="category-card" data-filter="pizzas">
+          <span class="category-card__icon">🍕</span>
+          <h3 class="category-card__title">Pizzas</h3>
+          <p class="category-card__text">Masa fina al horno</p>
+        </a>
+        <a href="#menu" class="category-card" data-filter="hamburguesas">
+          <span class="category-card__icon">🍔</span>
+          <h3 class="category-card__title">Hamburguesas</h3>
+          <p class="category-card__text">Jugosas y a la parrilla</p>
+        </a>
+        <a href="#menu" class="category-card" data-filter="bebidas">
+          <span class="category-card__icon">🥤</span>
+          <h3 class="category-card__title">Bebidas</h3>
+          <p class="category-card__text">Refrescantes y heladas</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MENÚ ============ -->
+  <section class="menu section" id="menu">
+    <div class="container">
+      <div class="section__header">
+        <h2 class="section__title">Nuestro Menú</h2>
+        <p class="section__subtitle">Elige tus favoritos y pide en línea</p>
+      </div>
+
+      <div class="menu__filters" id="menuFilters">
+        <button class="menu__filter menu__filter--active" data-filter="all">Todos</button>
+        <button class="menu__filter" data-filter="empanadas">Empanadas</button>
+        <button class="menu__filter" data-filter="pizzas">Pizzas</button>
+        <button class="menu__filter" data-filter="hamburguesas">Hamburguesas</button>
+        <button class="menu__filter" data-filter="bebidas">Bebidas</button>
+      </div>
+
+      <div class="menu__grid" id="menuGrid">
+        <!-- Los productos se renderizan con JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BENEFICIOS ============ -->
+  <section class="features section">
+    <div class="container">
+      <div class="features__grid">
+        <div class="feature">
+          <span class="feature__icon">🚀</span>
+          <h3 class="feature__title">Entrega rápida</h3>
+          <p class="feature__text">En 30 minutos o menos, garantizado.</p>
+        </div>
+        <div class="feature">
+          <span class="feature__icon">🌿</span>
+          <h3 class="feature__title">Ingredientes frescos</h3>
+          <p class="feature__text">Seleccionados cada día del mercado.</p>
+        </div>
+        <div class="feature">
+          <span class="feature__icon">💳</span>
+          <h3 class="feature__title">Pago seguro</h3>
+          <p class="feature__text">Tarjeta, efectivo o transferencia.</p>
+        </div>
+        <div class="feature">
+          <span class="feature__icon">🎁</span>
+          <h3 class="feature__title">Ofertas diarias</h3>
+          <p class="feature__text">Promociones especiales cada día.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section class="cta section">
+    <div class="container cta__container">
+      <div class="cta__content">
+        <h2 class="cta__title">¿Listo para pedir?</h2>
+        <p class="cta__text">Regístrate y obtén un 15% de descuento en tu primer pedido.</p>
+        <a href="pages/login.html" class="btn btn--primary btn--lg">Crear cuenta</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__container">
+      <div class="footer__brand">
+        <a href="index.html" class="header__logo">
+          <span class="header__logo-icon">🍕</span>
+          <span class="header__logo-text">Fast<strong>Bite</strong></span>
+        </a>
+        <p class="footer__text">La mejor comida rápida de la ciudad, hecha con amor y entregada con rapidez.</p>
+        <div class="footer__social">
+          <a href="#" class="footer__social-link" aria-label="Facebook">📘</a>
+          <a href="#" class="footer__social-link" aria-label="Instagram">📸</a>
+          <a href="#" class="footer__social-link" aria-label="Twitter">🐦</a>
+          <a href="#" class="footer__social-link" aria-label="TikTok">🎵</a>
+        </div>
+      </div>
+
+      <div class="footer__column">
+        <h4 class="footer__title">Menú</h4>
+        <ul class="footer__list">
+          <li><a href="#menu">Empanadas</a></li>
+          <li><a href="#menu">Pizzas</a></li>
+          <li><a href="#menu">Hamburguesas</a></li>
+          <li><a href="#menu">Bebidas</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__column">
+        <h4 class="footer__title">Empresa</h4>
+        <ul class="footer__list">
+          <li><a href="pages/about.html">Nosotros</a></li>
+          <li><a href="pages/contact.html">Contacto</a></li>
+          <li><a href="#">Términos</a></li>
+          <li><a href="#">Privacidad</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__column">
+        <h4 class="footer__title">Contacto</h4>
+        <ul class="footer__list">
+          <li>📍 Av. Principal 123</li>
+          <li>📞 +1 234 567 890</li>
+          <li>✉️ hola@fastbite.com</li>
+          <li>🕒 Lun–Dom 11:00–23:00</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container">
+        <p>&copy; <span id="year"></span> FastBite. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/utils/dom.js"></script>
+  <script src="js/modules/storage.js"></script>
+  <script src="js/components/navbar.js"></script>
+  <script src="js/pages/home.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

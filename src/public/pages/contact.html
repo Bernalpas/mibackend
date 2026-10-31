@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contáctate con FastBite: teléfono, email, dirección y formulario de contacto.">
+  <title>Contacto | FastBite</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/base/reset.css">
+  <link rel="stylesheet" href="../css/base/variables.css">
+  <link rel="stylesheet" href="../css/base/typography.css">
+  <link rel="stylesheet" href="../css/base/global.css">
+  <link rel="stylesheet" href="../css/layouts/header.css">
+  <link rel="stylesheet" href="../css/layouts/sections.css">
+  <link rel="stylesheet" href="../css/components/buttons.css">
+  <link rel="stylesheet" href="../css/components/forms.css">
+  <link rel="stylesheet" href="../css/components/cards.css">
+  <link rel="stylesheet" href="../css/components/navbar.css">
+  <link rel="stylesheet" href="../css/components/footer.css">
+  <link rel="stylesheet" href="../css/pages/contact.css">
+  <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="container header__container">
+      <a href="../index.html" class="header__logo">
+        <span class="header__logo-icon">🍕</span>
+        <span class="header__logo-text">Fast<strong>Bite</strong></span>
+      </a>
+      <nav class="navbar" id="navbar">
+        <ul class="navbar__list">
+          <li class="navbar__item"><a href="../index.html" class="navbar__link">Inicio</a></li>
+          <li class="navbar__item"><a href="../index.html#menu" class="navbar__link">Menú</a></li>
+          <li class="navbar__item"><a href="about.html" class="navbar__link">Nosotros</a></li>
+          <li class="navbar__item"><a href="contact.html" class="navbar__link navbar__link--active">Contacto</a></li>
+          <li class="navbar__item"><a href="login.html" class="navbar__link navbar__link--cta">Iniciar Sesión</a></li>
+        </ul>
+      </nav>
+      <button class="header__toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Ruta de navegación">
+          <a href="../index.html">Inicio</a><span>/</span><span>Contacto</span>
+        </nav>
+        <h1 class="page-hero__title">Contáctanos</h1>
+        <p class="page-hero__subtitle">Estamos aquí para ayudarte. Escríbenos o visítanos.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contact-layout">
+        <!-- Formulario -->
+        <div class="contact-form-wrapper">
+          <h2 class="section__title section__title--left">Envíanos un mensaje</h2>
+          <p class="contact-form__intro">Responderemos en menos de 24 horas.</p>
+
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name" class="form-label">Nombre completo *</label>
+                <input type="text" id="name" name="name" class="form-input" placeholder="Tu nombre" required>
+                <span class="form-error" data-error-for="name"></span>
+              </div>
+              <div class="form-group">
+                <label for="email" class="form-label">Correo electrónico *</label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="tu@email.com" required>
+                <span class="form-error" data-error-for="email"></span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="subject" class="form-label">Asunto *</label>
+              <input type="text" id="subject" name="subject" class="form-input" placeholder="¿En qué podemos ayudarte?" required>
+              <span class="form-error" data-error-for="subject"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="message" class="form-label">Mensaje *</label>
+              <textarea id="message" name="message" class="form-input form-textarea" rows="6"
+                        placeholder="Escribe tu mensaje aquí..." required></textarea>
+              <span class="form-error" data-error-for="message"></span>
+            </div>
+
+            <button type="submit" class="btn btn--primary btn--lg btn--block">Enviar mensaje</button>
+            <p class="form-success" id="formSuccess" hidden>✅ ¡Mensaje enviado! Te contactaremos pronto.</p>
+          </form>
+        </div>
+
+        <!-- Info de contacto -->
+        <aside class="contact-info">
+          <h2 class="section__title section__title--left">Información</h2>
+
+          <div class="contact-info__item">
+            <span class="contact-info__icon">📍</span>
+            <div>
+              <h3 class="contact-info__title">Dirección</h3>
+              <p class="contact-info__text">Av. Principal 123, Centro<br>Ciudad, CP 12345</p>
+            </div>
+          </div>
+
+          <div class="contact-info__item">
+            <span class="contact-info__icon">📞</span>
+            <div>
+              <h3 class="contact-info__title">Teléfono</h3>
+              <p class="contact-info__text"><a href="tel:+1234567890">+1 234 567 890</a></p>
+            </div>
+          </div>
+
+          <div class="contact-info__item">
+            <span class="contact-info__icon">✉️</span>
+            <div>
+              <h3 class="contact-info__title">Email</h3>
+              <p class="contact-info__text"><a href="mailto:hola@fastbite.com">hola@fastbite.com</a></p>
+            </div>
+          </div>
+
+          <div class="contact-info__item">
+            <span class="contact-info__icon">🕒</span>
+            <div>
+              <h3 class="contact-info__title">Horario</h3>
+              <p class="contact-info__text">Lunes a Domingo<br>11:00 – 23:00</p>
+            </div>
+          </div>
+
+          <div class="contact-info__map">
+            <div class="img-fallback">🗺️ Mapa</div>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__container">
+      <div class="footer__brand">
+        <a href="../index.html" class="header__logo">
+          <span class="header__logo-icon">🍕</span>
+          <span class="header__logo-text">Fast<strong>Bite</strong></span>
+        </a>
+        <p class="footer__text">La mejor comida rápida de la ciudad, hecha con amor y entregada con rapidez.</p>
+      </div>
+      <div class="footer__column">
+        <h4 class="footer__title">Menú</h4>
+        <ul class="footer__list">
+          <li><a href="../index.html#menu">Empanadas</a></li>
+          <li><a href="../index.html#menu">Pizzas</a></li>
+          <li><a href="../index.html#menu">Hamburguesas</a></li>
+          <li><a href="../index.html#menu">Bebidas</a></li>
+        </ul>
+      </div>
+      <div class="footer__column">
+        <h4 class="footer__title">Empresa</h4>
+        <ul class="footer__list">
+          <li><a href="about.html">Nosotros</a></li>
+          <li><a href="contact.html">Contacto</a></li>
+          <li><a href="#">Términos</a></li>
+          <li><a href="#">Privacidad</a></li>
+        </ul>
+      </div>
+      <div class="footer__column">
+        <h4 class="footer__title">Contacto</h4>
+        <ul class="footer__list">
+          <li>📍 Av. Principal 123</li>
+          <li>📞 +1 234 567 890</li>
+          <li>✉️ hola@fastbite.com</li>
+          <li>🕒 Lun–Dom 11:00–23:00</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <p>&copy; <span id="year"></span> FastBite. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/utils/dom.js"></script>
+  <script src="../js/utils/validation.js"></script>
+  <script src="../js/components/navbar.js"></script>
+  <script src="../js/pages/contact.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

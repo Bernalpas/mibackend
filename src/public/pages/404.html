@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <meta name="description" content="La página que buscas no existe en FastBite.">
+  <title>404 – Página no encontrada | FastBite</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/base/reset.css">
+  <link rel="stylesheet" href="../css/base/variables.css">
+  <link rel="stylesheet" href="../css/base/typography.css">
+  <link rel="stylesheet" href="../css/base/global.css">
+  <link rel="stylesheet" href="../css/components/buttons.css">
+  <link rel="stylesheet" href="../css/pages/404.css">
+  <link rel="stylesheet" href="../css/main.css">
+</head>
+<body class="notfound-body">
+
+  <main class="notfound">
+    <!-- Círculos decorativos de fondo -->
+    <div class="notfound__blob notfound__blob--1" aria-hidden="true"></div>
+    <div class="notfound__blob notfound__blob--2" aria-hidden="true"></div>
+    <div class="notfound__blob notfound__blob--3" aria-hidden="true"></div>
+
+    <div class="notfound__container">
+      <a href="../index.html" class="notfound__logo">
+        <span class="notfound__logo-icon">🍕</span>
+        <span class="notfound__logo-text">Fast<strong>Bite</strong></span>
+      </a>
+
+      <div class="notfound__content">
+        <span class="notfound__emoji" aria-hidden="true">🍔</span>
+        <p class="notfound__code">404</p>
+        <h1 class="notfound__title">¡Ups! Página no encontrada</h1>
+        <p class="notfound__text">
+          Parece que esta página se la comió un cliente hambriento.
+          Pero no te preocupes, tenemos mucho más para ofrecerte.
+        </p>
+
+        <div class="notfound__actions">
+          <a href="../index.html" class="btn btn--primary btn--lg">
+            🏠 Volver al inicio
+          </a>
+          <a href="../index.html#menu" class="btn btn--outline btn--lg">
+            🍕 Ver el menú
+          </a>
+        </div>
+
+        <div class="notfound__suggestions">
+          <p class="notfound__suggestions-title">Quizás buscabas:</p>
+          <ul class="notfound__suggestions-list">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="about.html">Nosotros</a></li>
+            <li><a href="contact.html">Contacto</a></li>
+            <li><a href="login.html">Iniciar sesión</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="notfound__footer">
+        &copy; <span id="year"></span> FastBite. Todos los derechos reservados.
+      </p>
+    </div>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

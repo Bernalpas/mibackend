@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Conoce la historia de FastBite, nuestra misión y el equipo detrás de la mejor comida rápida.">
+  <title>Nosotros | FastBite</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/base/reset.css">
+  <link rel="stylesheet" href="../css/base/variables.css">
+  <link rel="stylesheet" href="../css/base/typography.css">
+  <link rel="stylesheet" href="../css/base/global.css">
+  <link rel="stylesheet" href="../css/layouts/header.css">
+  <link rel="stylesheet" href="../css/layouts/sections.css">
+  <link rel="stylesheet" href="../css/components/buttons.css">
+  <link rel="stylesheet" href="../css/components/cards.css">
+  <link rel="stylesheet" href="../css/components/navbar.css">
+  <link rel="stylesheet" href="../css/components/footer.css">
+  <link rel="stylesheet" href="../css/pages/about.css">
+  <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="container header__container">
+      <a href="../index.html" class="header__logo">
+        <span class="header__logo-icon">🍕</span>
+        <span class="header__logo-text">Fast<strong>Bite</strong></span>
+      </a>
+      <nav class="navbar" id="navbar">
+        <ul class="navbar__list">
+          <li class="navbar__item"><a href="../index.html" class="navbar__link">Inicio</a></li>
+          <li class="navbar__item"><a href="../index.html#menu" class="navbar__link">Menú</a></li>
+          <li class="navbar__item"><a href="about.html" class="navbar__link navbar__link--active">Nosotros</a></li>
+          <li class="navbar__item"><a href="contact.html" class="navbar__link">Contacto</a></li>
+          <li class="navbar__item"><a href="login.html" class="navbar__link navbar__link--cta">Iniciar Sesión</a></li>
+        </ul>
+      </nav>
+      <button class="header__toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main class="page">
+    <!-- Page hero -->
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Ruta de navegación">
+          <a href="../index.html">Inicio</a><span>/</span><span>Nosotros</span>
+        </nav>
+        <h1 class="page-hero__title">Sobre <span class="text-accent">FastBite</span></h1>
+        <p class="page-hero__subtitle">Pasión por la buena comida desde 2015.</p>
+      </div>
+    </section>
+
+    <!-- Historia -->
+    <section class="section">
+      <div class="container about-story">
+        <div class="about-story__content">
+          <span class="badge">Nuestra historia</span>
+          <h2 class="section__title section__title--left">De un pequeño local a tu mesa</h2>
+          <p>
+            FastBite nació en 2015 en un pequeño local de barrio con una idea simple:
+            ofrecer comida rápida de verdadera calidad. Empezamos con solo tres recetas de
+            empanadas artesanales y hoy somos un referente con más de 50 productos.
+          </p>
+          <p>
+            Cada pizza se hornea al momento, cada hamburguesa se prepara a la parrilla y
+            cada empanada se rellena a mano. Creemos que la rapidez no está reñida con el
+            sabor ni con la calidad.
+          </p>
+          <div class="about-stats">
+            <div class="about-stat"><strong>+10</strong><span>Años de experiencia</span></div>
+            <div class="about-stat"><strong>+50k</strong><span>Pedidos entregados</span></div>
+            <div class="about-stat"><strong>+25</strong><span>Colaboradores</span></div>
+          </div>
+        </div>
+        <div class="about-story__image">
+          <img src="../assets/images/banners/about-kitchen.png" alt="Cocina de FastBite"
+               onerror="this.replaceWith(document.createRange().createContextualFragment('<div class=&quot;img-fallback&quot;>🍳</div>'))">
+        </div>
+      </div>
+    </section>
+
+    <!-- Valores -->
+    <section class="section section--alt">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">Nuestros valores</h2>
+          <p class="section__subtitle">Lo que nos mueve cada día</p>
+        </div>
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card__icon">🌿</div>
+            <h3 class="card__title">Calidad ante todo</h3>
+            <p class="card__text">Ingredientes frescos seleccionados diariamente, sin atajos.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon">⚡</div>
+            <h3 class="card__title">Rapidez</h3>
+            <p class="card__text">Tu pedido en 30 minutos o menos, siempre caliente.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon">🤝</div>
+            <h3 class="card__title">Cercanía</h3>
+            <p class="card__text">Un trato humano y cercano, cada pedido cuenta.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon">♻️</div>
+            <h3 class="card__title">Sostenibilidad</h3>
+            <p class="card__text">Empaques ecoamigables y proveedores locales.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Equipo -->
+    <section class="section">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">Nuestro equipo</h2>
+          <p class="section__subtitle">Las manos detrás del sabor</p>
+        </div>
+        <div class="team-grid">
+          <article class="team-card">
+            <div class="team-card__avatar">👨‍🍳</div>
+            <h3 class="team-card__name">Marco Díaz</h3>
+            <p class="team-card__role">Chef ejecutivo</p>
+          </article>
+          <article class="team-card">
+            <div class="team-card__avatar">👩‍🍳</div>
+            <h3 class="team-card__name">Laura Gómez</h3>
+            <p class="team-card__role">Jefa de cocina</p>
+          </article>
+          <article class="team-card">
+            <div class="team-card__avatar">🧑‍💼</div>
+            <h3 class="team-card__name">Andrés Ruiz</h3>
+            <p class="team-card__role">Gerente general</p>
+          </article>
+          <article class="team-card">
+            <div class="team-card__avatar">👩‍💻</div>
+            <h3 class="team-card__name">Sofía Pérez</h3>
+            <p class="team-card__role">Atención al cliente</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta section">
+      <div class="container cta__container">
+        <div class="cta__content">
+          <h2 class="cta__title">¿Quieres probar nuestra comida?</h2>
+          <p class="cta__text">Haz tu pedido ahora y descubre por qué somos favoritos.</p>
+          <a href="../index.html#menu" class="btn btn--primary btn--lg">Ver Menú</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__container">
+      <div class="footer__brand">
+        <a href="../index.html" class="header__logo">
+          <span class="header__logo-icon">🍕</span>
+          <span class="header__logo-text">Fast<strong>Bite</strong></span>
+        </a>
+        <p class="footer__text">La mejor comida rápida de la ciudad, hecha con amor y entregada con rapidez.</p>
+      </div>
+      <div class="footer__column">
+        <h4 class="footer__title">Menú</h4>
+        <ul class="footer__list">
+          <li><a href="../index.html#menu">Empanadas</a></li>
+          <li><a href="../index.html#menu">Pizzas</a></li>
+          <li><a href="../index.html#menu">Hamburguesas</a></li>
+          <li><a href="../index.html#menu">Bebidas</a></li>
+        </ul>
+      </div>
+      <div class="footer__column">
+        <h4 class="footer__title">Empresa</h4>
+        <ul class="footer__list">
+          <li><a href="about.html">Nosotros</a></li>
+          <li><a href="contact.html">Contacto</a></li>
+          <li><a href="#">Términos</a></li>
+          <li><a href="#">Privacidad</a></li>
+        </ul>
+      </div>
+      <div class="footer__column">
+        <h4 class="footer__title">Contacto</h4>
+        <ul class="footer__list">
+          <li>📍 Av. Principal 123</li>
+          <li>📞 +1 234 567 890</li>
+          <li>✉️ hola@fastbite.com</li>
+          <li>🕒 Lun–Dom 11:00–23:00</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <p>&copy; <span id="year"></span> FastBite. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/utils/dom.js"></script>
+  <script src="../js/components/navbar.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>
